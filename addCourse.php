@@ -55,6 +55,12 @@
                         <input type="file" name="file"><br/>
                         <input type="submit" value="Done" name="submit1"> <br/>
                     </form>
+                    <?php 
+                    if(isset($_POST['submit1'])){
+                        echo "<strong>Course added Successfully</strong>";
+                    }
+
+                    ?>
                 </td>
             </tr>
         </table>
