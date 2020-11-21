@@ -2,8 +2,8 @@
 
     if(isset($_POST['submit1'])){
         $filepath = $_FILES["file"]["name"];
-        echo print_r($filepath);
-        echo "showing path".$filepath;
+        //echo print_r($filepath);
+        //echo "showing path".$filepath;
 
         if(move_uploaded_file($_FILES["file"]["tmp_name"], $filepath))
         {
@@ -40,18 +40,12 @@
     </head>
     <body>
         <table align="center">
-            <tr>
-                <td>
-                    <form action="" method="post">
-                        <input type="text" name="heading" placeholder="Enter Course Name" size="35"><br>
-                        <input type="submit" name="detailSubmit" value="Post a photo for the course as a thumbnail">
-                    </form>
-
-                </td>
-            </tr>
+            
             <tr>
                 <td>
                     <form action="addCourse.php" enctype="multipart/form-data" method="post">
+                        <input type="text" name="heading" placeholder="Enter Course Name" size="35"><br>
+                        <strong>Post a photo for the course as a thumbnail</strong><br><br>
                         <input type="file" name="file"><br/>
                         <input type="submit" value="Done" name="submit1"> <br/>
                     </form>

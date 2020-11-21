@@ -60,6 +60,7 @@
                     </tr>
                 </table>
             </form>
+            <!--
             <form action="homePage.php" method="post">
                 <table align="right">
                     <tr>
@@ -71,6 +72,7 @@
                 </table>
                 <hr>
             </form>
+            -->
         </div>
             <table align="center">
                 <tr>
