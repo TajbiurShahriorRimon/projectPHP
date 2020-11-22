@@ -1,21 +1,5 @@
 <?php
-    if(isset($_POST['teacherSignIn'])) {
-        echo "hello";
-        $xmlLoad = simplexml_load_file("teacher.xml");
-    
-        $name = $_POST['userEmail'];
-        $pass = $_POST['userPassword'];
-        foreach ($xmlLoad as $xmlRoot) {
-            if ($name == $xmlRoot->email && $pass == $xmlRoot->password){
-                echo "Logged in";
-    
-                setcookie('userEmail', $name, time()+20);
-                header("Location: teacherHome.php");
-                break;
-            }
-        }
-    }
-
+    include 'valid.php';
 ?>
 
 <!DOCTYPE html>
@@ -44,8 +28,8 @@
                 <input type="password" name="userPassword" placeholder="Enter Password" size="35"><br><br>
                 <input type="submit" name="" value="Sign IN As Student!">
                 <input type="submit" name="teacherSignIn" value="Sign IN as Teacher!">
-                        
              </form>
+             <?php echo "<strong>$field</strong>"; ?>
             </td>
         </tr>
     </table>

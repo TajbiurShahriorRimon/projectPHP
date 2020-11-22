@@ -1,12 +1,7 @@
 <?php
     include 'homePage.php';
-    if(!isset($_COOKIE['userEmail'])){
-        header("Location: home.php");
-    }
-    /*if(isset($_POST['teacherSignIn'])){
-        //header("Location: home.php");
-        echo "hiofsd";
-    }*/
+    
+    include 'cookie.php';
 ?>
 
 <html>
